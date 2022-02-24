@@ -8,19 +8,13 @@
     <link href="~/lib/css/bootstrap.css" rel="stylesheet" />
 </head>
 <body>
-    <div class="bg-warning">
-        <span class="navbar-brand m-lg-2">Sami's Book Store</span>
-    </div>
-    <div class="row m-1 p-1 bg-dark tp-2">
 
-        <div id="types" class="col-3 text-white">
-            <vc:category></vc:category>
-            </div>
-        <div class="col-9">
-            <div class="col-9">
-                @RenderBody()
-            </div>
-        </div>
+    <div class="bg-warning">
+        <span class="navbar-brand m-lg-2 p-2">Sami's Book Store</span>
+    </div>
+
+    <div class="m-1 p-1">
+        @RenderBody()
     </div>
 </body>
 </html>
