@@ -20,5 +20,6 @@ namespace BookApp.Models
         }
 
         public virtual DbSet<Books> Books { get; set; }
+        public DbSet<Pay> Pay { get; set; }
     }
 }

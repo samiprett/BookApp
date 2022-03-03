@@ -1,0 +1,47 @@
+﻿@{
+}
+
+@model Pay
+
+<h2 class="text-white">Check Out Now</h2>
+<p class="text-white">Please enter your details below:</p>
+
+<form method="post" asp-action="Checkout" asp-controller="Purchase">
+
+    <div asp-validation-summary="All" class="text-danger"></div>
+
+    <h4 class="text-white">Ship to:</h4>
+
+    <div class="form-group text-white">
+        <label asp-for="Name">Name: </label><input asp-for="Name" class="form-control" />
+    </div>
+
+    <h4 class="text-white">Address:</h4>
+
+    <div class="form-group">
+        <label asp-for="AddressLine1" class="text-white">Line 1: </label><input asp-for="AddressLine1" class="form-control" />
+    </div>
+    <div>
+        <label asp-for="AddressLine2" class="text-white">Line 2: </label><input asp-for="AddressLine2" class="form-control" />
+    </div>
+    <div>
+        <label asp-for="AddressLine3" class="text-white">Line 3: </label><input asp-for="AddressLine3" class="form-control" />
+    </div>
+    <div>
+        <label asp-for="City" class="text-white">City: </label><input asp-for="City" class="form-control" />
+    </div>
+    <div>
+        <label asp-for="State" class="text-white">State: </label><input asp-for="State" class="form-control" />
+    </div>
+    <div>
+        <label asp-for="Country" class="text-white">Country: </label><input asp-for="Country" class="form-control" />
+    </div>
+    <div>
+        <label asp-for="ZipCode" class="text-white">Zipcode: </label><input asp-for="ZipCode" class="form-control" />
+    </div>
+
+    <div class="float-end">
+        <input class="btn btn-warning" type="submit" value="Send Payment" />
+    </div>
+
+</form>
