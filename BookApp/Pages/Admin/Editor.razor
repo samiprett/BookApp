@@ -2,9 +2,8 @@
 @page "/admin/books/create"
 @inherits OwningComponentBase<IBookRepository>
 
-<p>Edit page works</p>
 
-@*<style>
+<style>
     div.validation-message {
         color: rgb(220,53,69);
         font-weight: 500
@@ -16,9 +15,6 @@
 <EditForm Model="b" OnValidSubmit="SaveBook">
 
     <DataAnnotationsValidator></DataAnnotationsValidator>
-
-    @if (b.BookId != 0)
-    {
         <div class="form-group">
             <label>Book Id</label>
             <input class="form-control" disabled value="@b.BookId" />
@@ -73,10 +69,8 @@
         </div>
 
         <button type="submit" class="btn btn-@ThemeColor">Save</button>
-        <NavLink class="btn-secondary" href="/admin/booksadmin">Cancel</NavLink>
-    }
 
-</EditForm>*@
+</EditForm>
 
 @code {
     [Parameter]
@@ -108,6 +102,7 @@
         {
             repo.SaveBook(b);
         }
+        NavManager.NavigateTo("/admin");
     }
 
     [Inject]

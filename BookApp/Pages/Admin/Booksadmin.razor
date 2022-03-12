@@ -1,4 +1,4 @@
-﻿@page "/admin/booksadmin"
+﻿@page "/admin/books"
 @page "/admin"
 @inherits OwningComponentBase<IBookRepository>
 
@@ -9,7 +9,9 @@
         <tr>
             <th>Book ID</th>
             <th>Book Title</th>
-            <th>Options</th>
+            <th>Details</th>
+            <th>Edit</th>
+            <th>Delete</th>
         </tr>
     </thead>
 
@@ -44,6 +46,8 @@
             }
     </tbody>
 </table>
+
+<NavLink class="btn btn-warning" href="/admin/books/create">Create</NavLink>
 
 @code {
     public IBookRepository repo => Service;

@@ -32,6 +32,6 @@ namespace BookApp.Models
         public string ZipCode { get; set; }
 
         [BindNever]
-        public bool PurchaseReceived { get; set; }
+        public bool PurchaseReceived { get; set; } = false;
     }
 }
