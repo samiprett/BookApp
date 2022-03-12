@@ -15,9 +15,9 @@
 <EditForm Model="b" OnValidSubmit="SaveBook">
 
     <DataAnnotationsValidator></DataAnnotationsValidator>
-        <div class="form-group">
+        <div readonly class="form-group">
             <label>Book Id</label>
-            <input class="form-control" disabled value="@b.BookId" />
+            <input class="form-control-plaintext" disabled value="@b.BookId" />
         </div>
 
         <div class="form-group">
@@ -42,6 +42,9 @@
             <label>ISBN:</label>
             <ValidationMessage For="@(() => b.Isbn)"></ValidationMessage>
             <InputText class="form-control" @bind-Value="b.Isbn"></InputText>
+            <div class="form-text">
+                This can be found printed on the lower portion of the back cover of a book about the bar code and on the copyright page.
+            </div>
         </div>
 
         <div class="form-group">

@@ -1,5 +1,6 @@
-﻿@page "/purchases"
+﻿@page "/admin/purchases"
 @inherits OwningComponentBase<IPurchaseRespository>
+
 
 <PurchaseTable TableTitle="Uncollected Purchases" Purchases="UncollectedPurchases"
                ButtonLabel="Collected" PurchaseSelected="CollectPurchase"></PurchaseTable>

@@ -3,8 +3,7 @@
 @inherits OwningComponentBase<IBookRepository>
 
 
-
-<table class="table table-sm table-striped table-bordered">
+<table class="table table-hover table-sm table-striped table-bordered">
     <thead>
         <tr>
             <th>Book ID</th>
@@ -48,6 +47,8 @@
 </table>
 
 <NavLink class="btn btn-warning" href="/admin/books/create">Create</NavLink>
+
+
 
 @code {
     public IBookRepository repo => Service;
