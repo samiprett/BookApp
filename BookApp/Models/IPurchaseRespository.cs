@@ -7,7 +7,7 @@ namespace BookApp.Models
 {
     public class IPurchaseRespository
     {
-        IQueryable<Pay> Pay { get; }
+        public IQueryable<Pay> Pay { get; }
 
         public void SavePayment(Pay payment)
         {

@@ -1,0 +1,23 @@
+﻿@page "/admin"
+
+@model BookApp.Pages.Admin.IndexModel
+
+@{
+}
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>Sami's Book Store</title>
+    <link href="~/lib/css/bootstrap.css" rel="stylesheet" />
+    <link href="~/lib/twitter-bootstrap/css/bootstrap.css" rel="stylesheet" />
+</head>
+
+<body>
+    <component type="typeof(BookApp.Pages.Admin.Routed)" render-mode="Server" />
+    <script src="/_framework/blazor.server.js"></script>
+</body>
+
+</html>

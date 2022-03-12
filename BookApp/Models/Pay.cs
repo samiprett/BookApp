@@ -31,5 +31,7 @@ namespace BookApp.Models
         [Required(ErrorMessage = "Please enter a zipcode.")]
         public string ZipCode { get; set; }
 
+        [BindNever]
+        public bool PurchaseReceived { get; set; }
     }
 }
