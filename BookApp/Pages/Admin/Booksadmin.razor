@@ -24,15 +24,15 @@
                         <td>@b.Title</td>
 
                         <td>
-                            <NavLink class="btn btn-sm btn-warning" href="@GetDetailsUrl(b.BookId)">Details</NavLink>
+                            <NavLink class="btn btn-sm btn-warning active" href="@GetDetailsUrl(b.BookId)">Details</NavLink>
                         </td>
 
                         <td>
-                            <NavLink class="btn btn-sm btn-warning" href="@GetEditUrl(b.BookId)">Edit</NavLink>
+                            <NavLink class="btn btn-sm btn-warning active" href="@GetEditUrl(b.BookId)">Edit</NavLink>
                         </td>
 
                         <td>
-                            <button class="btn btn-warning btn-sm" @onclick="@(x => RemoveBook(b))">Delete</button>
+                            <button class="btn btn-warning btn-sm active" @onclick="@(x => RemoveBook(b))">Delete</button>
                         </td>
                     </tr>
                 }

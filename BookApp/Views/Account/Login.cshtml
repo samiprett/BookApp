@@ -1,0 +1,43 @@
+﻿@{
+    Layout = null;
+}
+
+@model LoginModel
+
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Book App Login</title>
+    <link href="~/lib/css/bootstrap.min.css" rel="stylesheet" />
+</head>
+
+<body>
+    <div class="bg-warning text-dark p-2">
+        <span class="navbar-brand m-lg-2">Book Store</span> 
+    </div>
+
+    <div class="m-1 p-1">
+        <div class="text-warning" asp-validation-summary="All"></div>
+
+        <form method="post" asp-controller="Account" asp-action="Login">
+
+            <div class="form-group">
+                <label asp-for="Username" class="text-dark" >Username: </label>
+                <input asp-for="Username" class="form-control border border-warning" />
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Password" class="text-dark">Password: </label>
+                <input type="password" asp-for="Password" class="form-control border border-warning" />
+            </div>
+
+            <button class="btn btn-warning active" type="submit">Log In</button>
+
+            <input type="hidden" asp-for="ReturnUrl" />
+
+        </form>
+    </div>
+</body>
+
+</html>
